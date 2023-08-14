@@ -51,6 +51,7 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: GeneralSans, sans-serif;
+    font-size: 1.6rem;
   }
 
   body {
