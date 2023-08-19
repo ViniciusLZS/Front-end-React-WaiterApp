@@ -9,9 +9,19 @@ interface OrderModalProps {
   visible: boolean;
   order: Order | null;
   onClose: () => void;
+  onCancelOrder: () => Promise<void>;
+  isLoading: boolean;
+  onChangeOrderStatus: () => void;
 }
 
-export function OrderModal({visible, order, onClose}: OrderModalProps) {
+export function OrderModal({
+  visible,
+  order,
+  onClose,
+  onCancelOrder,
+  isLoading,
+  onChangeOrderStatus,
+}: OrderModalProps) {
 
   useEffect(() => {
     function handleKeyDrown(event: KeyboardEvent) {
@@ -40,7 +50,7 @@ export function OrderModal({visible, order, onClose}: OrderModalProps) {
     <S.Overlay>
       <S.ModalBody>
         <header>
-          <strong>{order.table}</strong>
+          <strong>Mesa {order.table}</strong>
 
           <button type='button' onClick={onClose}>
             <img src={closeIcon} alt="Icone para fechar" />
@@ -92,12 +102,30 @@ export function OrderModal({visible, order, onClose}: OrderModalProps) {
         </S.OrderDetails>
 
         <S.Actions>
-          <button type='button' className='primary'>
-            <span>👨‍🍳️</span>
-            <strong>Iniciar produção</strong>
-          </button>
+          {order.status !== 'DONE' && (
+            <button
+              type='button'
+              className='primary'
+              disabled={isLoading}
+              onClick={ onChangeOrderStatus }
+            >
+              <span>
+                {order.status === 'WAITING' && '👨‍🍳️'}
+                {order.status === 'IN_PRODUCTION' && '✅️'}
+              </span>
+              <strong>
+                {order.status === 'WAITING' && 'Iniciar produção'}
+                {order.status === 'IN_PRODUCTION' && 'Concluir pedido'}
+              </strong>
+            </button>
+          )}
 
-          <button type='button' className='secondary'>
+          <button
+            type='button'
+            className='secondary'
+            onClick={onCancelOrder}
+            disabled={isLoading}
+          >
             <strong>Cancelar pedido</strong>
           </button>
         </S.Actions>
