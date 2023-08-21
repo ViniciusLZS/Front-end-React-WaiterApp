@@ -1,27 +1,34 @@
-# React + TypeScript + Vite
+<h1 align="center">WAITERAPP</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">Aplicativo para garçom, criado com o intuito de facilitar e organizar as comandas geradas pelos garçons, possui duas aplicações: uma móvel para o garçom e outra web para a cozinha/gestão. Desenvolvido com tecnologias de ponta, proporciona uma experiência em tempo real.</p>
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<div align="center"> 
+<img src="https://github.com/ViniciusLZS/App-React-Native-WaiterApp/blob/main/assets/toReadme/waiterapp.png" alt="Imagem do projeto"/>
+</div>
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+<h2>:rocket: Aprendizados:</h2>
+<p>
+  Ao concluir o desenvolvimento de um aplicativo voltado para garçons, utilizando um conjunto diversificado de tecnologias listadas abaixo, obtive uma sólida compreensão prática dessas ferramentas de ponta. 
+  Através do uso do React e React Native, adquiri habilidades para criar interfaces de usuário interativas e responsivas tanto para plataformas web quanto mobile.
+  A integração do Express me permitiu construir uma infraestrutura de back-end, possibilitando a comunicação eficiente entre o cliente e o servidor.
+  Além disso, a experiência com MongoDB me proporcionou insights valiosos sobre o armazenamento e recuperação eficiente de dados. Ao explorar o Styled Components, aprimorei minha capacidade de estilizar os elementos de forma modular e elegante.
+  Por fim, a implementação de WebSockets enriqueceu meu conhecimento em tempo real e interatividade, tornando possível a comunicação instantânea entre os usuários.
+  No geral, esse projeto me proporcionou uma base sólida para prosseguir com confiança no desenvolvimento de aplicativos modernos e escaláveis, demonstrando minha proficiência nas tecnologias-chave empregadas. 
+</p>
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+<h2>💻️ Tecnologias</h2>
+<ul>
+  <li>React</li>
+  <li>React Native</li>
+  <li>Styled Component</li>
+  <li>Expo</li>
+  <li>Node</li>
+  <li>Express</li>
+  <li>MongoDB</li>
+  <li>WebSockets</li>
+</ul>
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+<p align="center">Desenvolvido pelo curso <a href='https://jstack.com.br/'>JStack</a>.</p>
